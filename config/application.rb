@@ -29,4 +29,13 @@ module Video
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
   end
+
+  # config/application.rb or any initializer file
+
+# Print out the values of AWS environment variables
+puts "AWS_ACCESS_KEY_ID: #{ENV['AWS_ACCESS_KEY_ID']}"
+puts "AWS_SECRET_ACCESS_KEY: #{ENV['AWS_SECRET_ACCESS_KEY']}"
+puts "AWS_REGION: #{ENV['AWS_REGION']}"
+puts "AWS_BUCKET_NAME: #{ENV['AWS_BUCKET_NAME']}"
+
 end
