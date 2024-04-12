@@ -1,14 +1,8 @@
 class PostsController < ApplicationController
   def create
     @post = Post.new(post_params.except(:videos))
-
-    puts "---------------------------------------------------------------------"
-
-    puts Post.inspect
-    puts @post.name
     videos = Array.wrap(params[:videos])
 
-    puts "---------------------------------------------------------------------"
 
     if videos
       videos.each do |video|
